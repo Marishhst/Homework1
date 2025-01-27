@@ -9,7 +9,7 @@
 
 .heading { /*не понимаю почему при просмотре в отладчике с шириной экрана 1440 карточки уползают за правый край, а с шириной 1900 - всё как в макете */
     background-repeat: no-repeat;
-    width: 1200px;/*width: 1440px;*/
+    width: 1200px;
     height: 751px;/*800-49 */
     background-image: url(./images/header.jpeg); 
     background-repeat: no-repeat;
@@ -166,6 +166,7 @@
     display: flex;
     flex-direction: column;
     padding: 48px;
+    width: 600px;
 }
 .mini-games_name {
     color: rgb(32, 32, 39);
@@ -216,3 +217,4 @@
     color: rgb(0, 0, 0);
 }
 
+@import 'mobile';
