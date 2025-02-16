@@ -3,20 +3,22 @@
     padding: 0;
 }
 .center {
-    padding-left: 120px;/*calc(50% - 720px);*/
-    padding-right: 120px;/*calc(50% - 720px);*/
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    /*padding-left: 120px;/*calc(50% - 720px);*/
+   /* padding-right: 120px;/*calc(50% - 720px);*/
+
 }
 
 .heading { /*не понимаю почему при просмотре в отладчике с шириной экрана 1440 карточки уползают за правый край, а с шириной 1900 - всё как в макете */
-    background-repeat: no-repeat;
-    width: 1200px;
+    width: 100%;
     height: 751px;/*800-49 */
     background-image: url(./images/header.jpeg); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
 }
-.heading_title {
+.heading__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 64px;
@@ -25,7 +27,7 @@
     padding-top: 196px;
     width: 768px;
 }
-.heading_subtitle {
+.heading__subtitle {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 24px;
@@ -34,7 +36,7 @@
     letter-spacing: 0px;
     padding-top: 24px;
 }
-.heading_button {
+.heading__button {
     width: 247px;
     height: 66px;
     color: rgb(255, 255, 255);
@@ -49,16 +51,27 @@
     background: rgb(32, 32, 39);
     margin-top: 48px;
 }
+
+button {
+    cursor: pointer; 
+    border: none;
+    transition: all 0.3s ease; 
+}
+
+button:hover {
+    background-color: #fff; 
+    color: #000; 
+    border: 1px solid rgb(32, 32, 39);           
+}
 .about {
-     /*поправить ширину и высоту на гибкие варианты */
-    width: 1200px;
+    width: 100%;
     height: 1470px;
     background-image: url(./images/backgroundAbout1.png);/*поправить что-то не так с картинкой */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.about_title, .mini-games_title{
+.about__title, .mini-games__title{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 64px;
@@ -66,7 +79,7 @@
     line-height: 78px;
     padding-top: 46px;
 }
-.about_subtitle {
+.about__subtitle {
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 24px;
@@ -89,39 +102,39 @@
     border-radius: 30px;
     width: 378px; 
 }
-.game-cards_one{
+.game-cards__one{
     height: 473px;
    /*314 картинка+ 159 инфоблок*/ 
 }
-.game-cards_two{
+.game-cards__two{
     height: 512px;
    /*314 картинка+ 198 инфоблок*/ 
 }
-.game-cards_three{
+.game-cards__three{
     height: 473px;
    /*314 картинка+ 159 инфоблок*/ 
 }
-.game-cards_four{
+.game-cards__four{
     height: 551px;
     position: relative;
     bottom: 40px;
    /*314 картинка+ 237 инфоблок*/ 
 }
-.game-cards_five{
+.game-cards__five{
     height: 512px;
    /*314 картинка+ 198 инфоблок*/ 
 }
-.game-cards_six{
+.game-cards__six{
     height: 551px;
     position: relative;
     bottom: 40px;
    /*314 картинка+ 237 инфоблок*/ 
 }
-.game-cards_picture {
+.game-cards__picture {
     border-radius: 30px;
-  /*поправить улучшить качество картинок, а то совсем пискелями*/
+  /*КАК? улучшить качество картинок, а то совсем пискелями*/
 }
-.game-cards_number {
+.game-cards__number {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 16px;
@@ -134,7 +147,7 @@
     margin-left: 32px;
     width: fit-content;
 }
-.game-cards_title {
+.game-cards__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 32px;
@@ -143,18 +156,21 @@
     padding: 16px 32px 36px 32px;
 }
 .mini-games {
-    width: 1200px;
+    width: 100%;
     background-image: url(./images/backgroundAbout2.png);
     padding-bottom: 144px;
+    background-size: cover;
 }
-.mini-games_one, .mini-games_three, .mini-games_four {
+.mini-games__one, .mini-games__three, .mini-games__four {
+    width: 1200px;
     margin-top: 72px;
     display: flex;
     background-color:rgb(255, 255, 255);
     border-radius: 30px;
     justify-content: space-between;
 }
-.mini-games_two, .mini-games_five, .mini-games_six {
+.mini-games__two, .mini-games__five, .mini-games__six {
+    width: 1200px;
     margin-top: 72px;
     display: flex;
     background-color:rgb(255, 255, 255);
@@ -162,20 +178,20 @@
     justify-content: space-between;
     flex-direction: row-reverse;
 }
-.mini-games_info {
+.mini-games__info {
     display: flex;
     flex-direction: column;
     padding: 48px;
     width: 600px;
 }
-.mini-games_name {
+.mini-games__name {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 48px;
     font-weight: 700;
     line-height: 59px;
 }
-.mini-games_description {
+.mini-games__description {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 24px;
@@ -183,7 +199,7 @@
     line-height: 32px;
     margin-top: 24px;
 }
-.mini-games_button {
+.mini-games__button {
     width: 247px;
     height: 66px;
     border-radius: 60px;
@@ -196,20 +212,23 @@
     line-height: 141.69%;
     margin-top: 36px;
 }
-.mini-games_picture{
+.mini-games__picture{
     border-radius: 60px;
     width: 600px;
     height: 500px;
 }
 .footer {
-    background-color: rgb(189, 237, 53);
+    width: 100%;
+    background-image: url(./images/backgroundfooter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 150px;
     display: flex;
     justify-content: center; /* Горизонтальное выравнивание */
     align-items: center; 
-    max-width: 1440px;
 }
-.footer_info {
+.footer__info {
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 600;
