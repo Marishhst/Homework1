@@ -1,0 +1,10 @@
+@media (max-width: 752px) {
+    .center {/*ДРУГИЕ ЗНАЧЕНИЯ*/
+        padding-left: 120px;/*calc(50% - 720px);*/
+        padding-right: 120px;/*calc(50% - 720px);*/
+    }
+    .heading{
+    background-image: url(./images/headermob.png);
+    text-align: center;
+    }
+}
