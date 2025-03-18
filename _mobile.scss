@@ -3,14 +3,13 @@
         margin: 0;
         padding: 0;
       }
-    .center {/*ДРУГИЕ ЗНАЧЕНИЯ*/
+    .center {
         padding-left: 15px;
         padding-right: 15px;
     }
     .heading {
         background: #E1FF8F url(images/star-decoration-mobile.png) no-repeat;  
         text-align: center;
-        height: 700px;
     &__title {
         color: rgb(32, 32, 39);
         font-family: Montserrat;
@@ -40,6 +39,7 @@
     }
     .mini-games {
         padding-bottom: 48px;
+        padding-left: 16px;
         &__title {
         font-family: Montserrat;
         font-size: 40px;
