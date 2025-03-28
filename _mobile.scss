@@ -1,8 +1,4 @@
 @media (max-width: 376px) {
-    * {
-        margin: 0;
-        padding: 0;
-      }
     .center {
         padding-left: 15px;
         padding-right: 15px;
@@ -54,14 +50,15 @@
         &__cards{
         display: flex;
         flex-direction: column;
-        width: 343px;
+        max-width: 343px;
         }
-        &__one, &__two, &__three, &__four, &__five, &__six {
-        width: 343px;
+    }
+
+    .mini-games-card{ 
+        max-width: 343px;
         display: flex;
         flex-direction: column-reverse;
         margin-top: 24px;
-        }
         &__info{
         width: auto;
         padding: 29px 29px 32px 29px ;
@@ -81,9 +78,9 @@
         letter-spacing: 0px;
         text-align: left;
         }
-        &__picture {
-        width: 343px;
-        height: 285px;
+        &__image {
+        width: auto;
+        height: auto;
         border-radius: 27.22px;
         }
         &__button{
@@ -95,7 +92,6 @@
         line-height: 141.69%;
         margin-top: 32px;
         }
-
 
     }
 }
