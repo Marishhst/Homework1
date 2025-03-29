@@ -1,4 +1,10 @@
-body { 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #000000;
 }
 
@@ -59,14 +65,15 @@ button:hover {
 }
 .about {
     height: 1470px;
-    background: #000000 url(images/star-decoration-about.png) no-repeat -10% top;
+    background: url(images/star-decoration-about.png) no-repeat -10% top;
+    padding-top: 94px;
+    padding-bottom: 50px;
     &__title, .mini-games__title{
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
-    padding-top: 46px;
     }
     &__subtitle {
     color: rgb(255, 255, 255);
@@ -145,14 +152,20 @@ button:hover {
     width: 378px; 
 }
 .mini-games {
-    background: #000000 url(images/star-decoration-minigames.png) no-repeat right top;
+    background: url(images/star-decoration-minigames.png) no-repeat right top;
     padding-bottom: 144px;
+    padding-top: 46px;
     &__title {
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 .mini-games-card{ 

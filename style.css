@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #000000;
 }
@@ -62,7 +68,9 @@ button:hover {
 
 .about {
   height: 1470px;
-  background: #000000 url(images/star-decoration-about.png) no-repeat -10% top;
+  background: url(images/star-decoration-about.png) no-repeat -10% top;
+  padding-top: 94px;
+  padding-bottom: 50px;
 }
 .about__title, .about .mini-games__title {
   color: rgb(255, 255, 255);
@@ -70,7 +78,6 @@ button:hover {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
-  padding-top: 46px;
 }
 .about__subtitle {
   color: rgb(255, 255, 255);
@@ -152,8 +159,9 @@ button:hover {
 }
 
 .mini-games {
-  background: #000000 url(images/star-decoration-minigames.png) no-repeat right top;
+  background: url(images/star-decoration-minigames.png) no-repeat right top;
   padding-bottom: 144px;
+  padding-top: 46px;
 }
 .mini-games__title {
   color: rgb(255, 255, 255);
@@ -161,6 +169,11 @@ button:hover {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
+}
+.mini-games__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .mini-games-card_one, .mini-games-card_three, .mini-games-card_four {
@@ -235,7 +248,7 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
-@media (max-width: 376px) {
+@media (max-width: 544px) {
   .center {
     padding-left: 15px;
     padding-right: 15px;
@@ -288,7 +301,8 @@ button:hover {
   .mini-games__cards {
     display: flex;
     flex-direction: column;
-    max-width: 343px;
+    max-width: 100%;
+    justify-content: center;
   }
   .mini-games-card {
     max-width: 343px;
@@ -352,6 +366,7 @@ button:hover {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
   }
   .mini-games-card_one, .mini-games-card_two, .mini-games-card_three, .mini-games-card_four, .mini-games-card_five, .mini-games-card_six {
     width: 343px;
@@ -377,7 +392,7 @@ button:hover {
     max-width: 300px;
   }
   .mini-games-card__info {
-    max-width: 300px;
+    max-width: 100%;
     padding: 20px;
     align-items: center;
   }
@@ -436,6 +451,7 @@ button:hover {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
   }
   .mini-games-card_one, .mini-games-card_two, .mini-games-card_three, .mini-games-card_four, .mini-games-card_five, .mini-games-card_six {
     width: 343px;
@@ -449,7 +465,7 @@ button:hover {
     font-weight: 700;
     line-height: 39px;
     text-align: center;
-    max-width: 300px;
+    max-width: 100%;
   }
   .mini-games-card__description {
     font-family: Montserrat;
@@ -458,15 +474,15 @@ button:hover {
     line-height: 20px;
     letter-spacing: 0px;
     text-align: center;
-    max-width: 300px;
+    max-width: 100%;
   }
   .mini-games-card__info {
-    max-width: 300px;
+    max-width: 100%;
     padding: 20px;
     align-items: center;
   }
   .mini-games-card__image {
-    width: 343px;
+    width: 100%;
     height: 285px;
     border-radius: 27.22px;
   }

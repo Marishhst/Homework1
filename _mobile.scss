@@ -1,4 +1,4 @@
-@media (max-width: 376px) {
+@media (max-width: 544px) {
     .center {
         padding-left: 15px;
         padding-right: 15px;
@@ -50,7 +50,8 @@
         &__cards{
         display: flex;
         flex-direction: column;
-        max-width: 343px;
+        max-width: 100%;
+        justify-content: center;
         }
     }
 

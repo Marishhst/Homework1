@@ -19,6 +19,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
     }    
     }
  .mini-games-card{
@@ -46,7 +47,7 @@
         max-width: 300px;
         }
     &__info {
-        max-width: 300px;
+        max-width: 100%;
         padding: 20px;
         align-items: center;
         }
