@@ -4,6 +4,7 @@
         padding-right: 15px;
     }
     .heading {
+        height: 700px;
         background: #E1FF8F url(images/star-decoration-mobile.png) no-repeat;  
         text-align: center;
     &__title {
@@ -27,6 +28,19 @@
         width: auto;
     }
     &__button {
+        box-sizing: border-box;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        width: 285px;
+        height: 55px;
+        align-items: center;
+        padding: 16px 28px 16px 28px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
         margin-top: 36px;
     }
     }
@@ -52,6 +66,7 @@
         flex-direction: column;
         max-width: 100%;
         justify-content: center;
+        margin-top: -24px;
         }
     }
 
@@ -78,6 +93,7 @@
         line-height: 20px;
         letter-spacing: 0px;
         text-align: left;
+        margin-top: 16px;
         }
         &__image {
         width: auto;
