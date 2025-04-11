@@ -1,0 +1,506 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.heading {
+  align-items: center;
+  height: 800px;
+  width: auto;
+  background: #E1FF8F url(images/star-decoration.png) no-repeat -10% 80%;
+}
+.heading__title {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  padding-top: 196px;
+  width: 768px;
+}
+.heading__subtitle {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  padding-top: 24px;
+  max-width: 768px;
+}
+.heading__button {
+  width: 247px;
+  height: 66px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  letter-spacing: 0%;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  margin-top: 48px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgb(32, 32, 39);
+}
+
+.about {
+  height: 1470px;
+  background: url(images/star-decoration-about.png) no-repeat -10% top;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.about__title, .about .mini-games__title {
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+}
+.about__subtitle {
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 1200px;
+}
+.game-cards__one {
+  height: 473px;
+  /*314 картинка+ 159 инфоблок*/
+}
+.game-cards__two {
+  height: 512px;
+  /*314 картинка+ 198 инфоблок*/
+}
+.game-cards__three {
+  height: 473px;
+  /*314 картинка+ 159 инфоблок*/
+}
+.game-cards__four {
+  height: 551px;
+  position: relative;
+  bottom: 40px;
+  /*314 картинка+ 237 инфоблок*/
+}
+.game-cards__five {
+  height: 512px;
+  /*314 картинка+ 198 инфоблок*/
+}
+.game-cards__six {
+  height: 551px;
+  position: relative;
+  bottom: 40px;
+  /*314 картинка+ 237 инфоблок*/
+}
+.game-cards__picture {
+  border-radius: 30px;
+}
+.game-cards__number {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  padding: 8px 16px 10px 16px;
+  border-radius: 30px;
+  background: rgb(247, 247, 247);
+  margin-top: 32px;
+  margin-left: 32px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.game-cards__title {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  padding: 16px 32px 36px 32px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 378px;
+}
+
+.mini-games {
+  background: url(images/star-decoration-minigames.png) no-repeat right top;
+  padding-bottom: 144px;
+  padding-top: 46px;
+}
+.mini-games__title {
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+}
+.mini-games__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mini-games-card_one, .mini-games-card_three, .mini-games-card_four {
+  margin-top: 72px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  justify-content: space-between;
+}
+.mini-games-card_two, .mini-games-card_five, .mini-games-card_six {
+  margin-top: 72px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.mini-games-card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 600px;
+}
+.mini-games-card__name {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+.mini-games-card__description {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 24px;
+}
+.mini-games-card__button {
+  width: 247px;
+  height: 66px;
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding: 16px 28px 16px 28px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  margin-top: 36px;
+}
+.mini-games-card__image {
+  border-radius: 30px;
+  width: 600px;
+  height: 500px;
+}
+
+.footer {
+  background: #E1FF8F;
+  height: 150px;
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center;
+  width: auto;
+}
+.footer__info {
+  overflow-wrap: break-word;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 544px) {
+  .center {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .heading {
+    height: 700px;
+    background: #E1FF8F url(images/star-decoration-mobile.png) no-repeat;
+    text-align: center;
+  }
+  .heading__title {
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    width: auto;
+    letter-spacing: 0px;
+    padding-top: 147px;
+    text-align: center;
+  }
+  .heading__subtitle {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+  .heading__button {
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    width: 285px;
+    height: 55px;
+    align-items: center;
+    padding: 16px 28px 16px 28px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    margin-top: 36px;
+  }
+  .about {
+    display: none;
+  }
+  .mini-games {
+    padding-bottom: 48px;
+    padding-left: 16px;
+  }
+  .mini-games__title {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: left;
+    width: auto;
+    display: flex;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .mini-games__cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: -24px;
+  }
+  .mini-games-card {
+    max-width: 343px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 24px;
+  }
+  .mini-games-card__info {
+    width: auto;
+    padding: 29px 29px 32px 29px;
+  }
+  .mini-games-card__name {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: left;
+  }
+  .mini-games-card__description {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 16px;
+  }
+  .mini-games-card__image {
+    width: auto;
+    height: auto;
+    border-radius: 27.22px;
+  }
+  .mini-games-card__button {
+    width: 285px;
+    height: 55px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    margin-top: 32px;
+  }
+}
+@media (min-width: 629px) and (max-width: 1199px) {
+  .center {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .heading {
+    background: #E1FF8F url(images/star-decoration.png) no-repeat 100%;
+  }
+  .heading__title {
+    width: auto;
+  }
+  .about {
+    display: none;
+  }
+  .mini-games {
+    padding-bottom: 60px;
+  }
+  .mini-games__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .mini-games-card_one, .mini-games-card_two, .mini-games-card_three, .mini-games-card_four, .mini-games-card_five, .mini-games-card_six {
+    width: 343px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 24px;
+  }
+  .mini-games-card__name {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: center;
+    max-width: 300px;
+  }
+  .mini-games-card__description {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    max-width: 300px;
+  }
+  .mini-games-card__info {
+    max-width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+  .mini-games-card__image {
+    width: 343px;
+    height: 285px;
+    border-radius: 27.22px;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+@media (min-width: 377px) and (max-width: 628px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 182px;
+  }
+  .heading__title {
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    width: auto;
+    letter-spacing: 0px;
+    padding-top: 147px;
+    text-align: center;
+  }
+  .heading__subtitle {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    width: auto;
+  }
+  .heading__button {
+    font-size: 24px;
+    margin-top: 36px;
+  }
+  .about {
+    display: none;
+  }
+  .mini-games {
+    padding-bottom: 60px;
+  }
+  .mini-games__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .mini-games-card_one, .mini-games-card_two, .mini-games-card_three, .mini-games-card_four, .mini-games-card_five, .mini-games-card_six {
+    width: 343px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 24px;
+  }
+  .mini-games-card__name {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: center;
+    max-width: 100%;
+  }
+  .mini-games-card__description {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    max-width: 100%;
+  }
+  .mini-games-card__info {
+    max-width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+  .mini-games-card__image {
+    width: 100%;
+    height: 285px;
+    border-radius: 27.22px;
+  }
+}/*# sourceMappingURL=style.css.map */
