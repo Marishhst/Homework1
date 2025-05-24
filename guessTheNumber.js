@@ -6,7 +6,7 @@ document.getElementById('button-gameGuessTheNumber').addEventListener('click', f
     function gameGuessTheNumber() {
         const userNumber = prompt("Мы загадали число от 1 до 100. Попробуй его отгадать! Напиши свое предположение :");
         // вводит число
-        if (!userNumber || isNaN(userNumber)) { // ввел не число или не тот диапозон - заканчиваем
+        if (!userNumber || isNaN(userNumber)) { // ввел не то - заканчиваем
             alert('Что-то не так. Возвращайся как захочешь поиграть ;)');
             return; 
         }
