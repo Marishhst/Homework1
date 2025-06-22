@@ -1,65 +1,31 @@
-function gameSimpleArithmetic() { 
-    const wantToPlay = confirm("Хотите сыграть?");
+function gameReverseText(str) {
+    return str.split('').reverse().join('');
+}
 
-    if (!wantToPlay) {
-        alert("Приходи ещё!");
+// Функция для проверки палиндрома
+function isPalindrome(str) {
+    const cleanedStr = str.toLowerCase().replace(/[^a-zа-яё]/gi, '');
+    return cleanedStr === gameReverseText(cleanedStr);
+}
+
+// Основная логика обработки события клика кнопки
+function reverseText() {
+    const input = document.getElementById("inputText").value.trim();
+    if (!input.length) {
+        alert("Введите какой-нибудь текст!");
         return;
     }
 
-     /* Создание примера */ 
-    function generateMathExample() {
-        let num1 = Math.floor(Math.random() * 15) + 1;
-        let num2 = Math.floor(Math.random() * 15) + 1;
-        const operations = ["+", "-", "*", "/"];
-        let operation = "";
+    // Переворачиваем строку
+    const reversedText = gameReverseText(input);
 
-        do {
-            operation = operations[Math.floor(Math.random() * operations.length)];
-            switch(operation) {
-                case "+":
-                    break;
-                case "-":
-                    if(num1 > num2) break;
-                    else [num1, num2] = [num2, num1];
-                    break;
-                case "*":
-                    break;
-                case "/":
-                    if((num1 >= num2) && (num1 % num2 === 0)) break;
-                    else {
-                        num1 = Math.floor(Math.random() * 20) + 1;
-                        num2 = Math.floor(Math.random() * 20) + 1;
-                    }
-            }
-        } while(!operation);
-
-        const exampleString = `${num1} ${operation} ${num2}`;
-        const result = eval(exampleString);
-        return {example: exampleString, answer: result};
+    // Проверяем, является ли строка палиндромом
+    let palindromeInfo = '';
+    if (isPalindrome(input)) {
+        palindromeInfo = '<br><strong>Это палиндром!</strong>';
     }
 
-     /*Взаимодействие с пользователем*/ 
-    function gameUser() {
-        const trueAnswer = generateMathExample();
-        const userAnswer = Number(prompt(`${trueAnswer.example}`));
-
-        if(userAnswer === trueAnswer.answer) {
-            alert(`Верно, ${trueAnswer.example} = ${trueAnswer.answer}`);
-        } else {
-            alert(`Неверно, ${trueAnswer.example} = ${trueAnswer.answer}`);
-        }
-
-        /*Взаимодействие с пользователем ЕЩЁ или ХВАТИТ*/ 
-        const tryAgain = confirm("Попробовать ещё раз?");
-        if(tryAgain) {
-            gameUser(); /*Ещё !!! РАЗОБРАТЬСЯ */ 
-        } else {
-            alert("Спасибо за игру! Приходи ещё!");/*Хватит*/ 
-        }
-    }
-    /*Снова взаимодействие с пользователем*/ 
-    gameUser();
+    // Выводим результат
+    document.getElementById("output").innerHTML =
+        `Ваш перевёрнутый текст: ${reversedText}${palindromeInfo}`;
 }
-/*Всё заново*/ 
-gameSimpleArithmetic(); 
-    
