@@ -184,6 +184,14 @@ console.log(evenArr);
 Math.random() в диапазоне от 1 до 10.
 Требуется найти среднее арифметическое этих цифр, результат программы вывести в консоль.*/
 
+function formatNumber(num) {
+    return num.toLocaleString('en-US', {minimumIntegerDigits: 2 });
+}
+
+function formatNumber(num) {
+    return num.toString().padStart(2, '0'); 
+}
+
 function randomNumb() {
     return Math.floor(Math.random() * 10);
 }
@@ -191,10 +199,14 @@ function randomNumb() {
 const arr = [];
 
 for (let i = 0; i < 10; i++) {
-    arr.push(randomNumb());
+    const number = randomNumb(); 
+    arr.push(formatNumber(number)); 
 }
 
-console.log(arr);
+console.log(arr.join(', ')); 
 
-console.log(arr.reduce((a, b) => a + b) / arr.length);
+const sum = arr.map(str => parseInt(str)).reduce((acc, curr) => acc + curr);
+const avg = sum / arr.length;
+
+console.log(`Среднее значение: ${avg}`);
 

@@ -1,31 +1,26 @@
-function gameReverseText(str) {
-    return str.split('').reverse().join('');
+function formatNumber(num) {
+    return num.toLocaleString('en-US', {minimumIntegerDigits: 2 });
 }
 
-// Функция для проверки палиндрома
-function isPalindrome(str) {
-    const cleanedStr = str.toLowerCase().replace(/[^a-zа-яё]/gi, '');
-    return cleanedStr === gameReverseText(cleanedStr);
+function formatNumber(num) {
+    return num.toString().padStart(2, '0'); 
 }
 
-// Основная логика обработки события клика кнопки
-function reverseText() {
-    const input = document.getElementById("inputText").value.trim();
-    if (!input.length) {
-        alert("Введите какой-нибудь текст!");
-        return;
-    }
-
-    // Переворачиваем строку
-    const reversedText = gameReverseText(input);
-
-    // Проверяем, является ли строка палиндромом
-    let palindromeInfo = '';
-    if (isPalindrome(input)) {
-        palindromeInfo = '<br><strong>Это палиндром!</strong>';
-    }
-
-    // Выводим результат
-    document.getElementById("output").innerHTML =
-        `Ваш перевёрнутый текст: ${reversedText}${palindromeInfo}`;
+function randomNumb() {
+    return Math.floor(Math.random() * 10);
 }
+
+const arr = [];
+
+for (let i = 0; i < 10; i++) {
+    const number = randomNumb(); 
+    arr.push(formatNumber(number)); 
+}
+
+console.log(arr.join(', ')); 
+
+const sum = arr.map(str => parseInt(str)).reduce((acc, curr) => acc + curr);
+const avg = sum / arr.length;
+
+console.log(`Среднее значение: ${avg}`);
+
