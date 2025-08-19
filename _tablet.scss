@@ -1,4 +1,4 @@
-@media (min-width: 629px) and (max-width: 1199px) {
+@media (min-width: 736px) and (max-width: 1199px) {
     .center {
         padding-left: 20px;
         padding-right: 20px;
@@ -7,6 +7,7 @@
     background: #E1FF8F url(images/star-decoration.png) no-repeat 100%;
     &__title{
         width: auto;
+        font-size: auto;
     }
     }
     .about {
