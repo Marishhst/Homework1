@@ -1,31 +1,29 @@
 document.getElementById('button-gameRockPaperScissors').addEventListener('click', () => {
     function gameRockPaperScissors() {
-
-    const wantToPlay = confirm("Сыграем в 'Камень, Ножницы, Бумага?'");
-
-    if (!wantToPlay) {
-        alert('Приходи еще!');
-        return;
-    }
-
-    while(true) {
-        const choices = ['камень', 'ножницы', 'бумага'];
-
-        // Запрашиваем выбор пользователя через prompt
-        const playerChoice = prompt("Напиши свой выбор:\nКамень\nНожницы\nБумага");
-
-        // Если пользователь ничего не выбрал или нажал Cancel, завершаем игру
-        if (!playerChoice) {
-            alert('Не хочешь сейчас играть? Приходи еще как будет желание!');
-            break;
+        const wantToPlay = confirm("Сыграем в 'Камень, Ножницы, Бумага?'");
+        
+        if (!wantToPlay) {
+            alert('Приходи еще!');
+            return;
         }
+    
+        while(true) {
+            const choices = ['камень', 'ножницы', 'бумага'];
+            
+            // Запрашиваем выбор пользователя через prompt
+            const playerChoice = prompt("Напиши свой выбор:\nКамень\nНожницы\nБумага"); 
 
-        // Сделать слово пользователя одним размером
-        const normalizedPlayerChoice = playerChoice.toLowerCase();
-
-        // Сгенерировать вариант компьютера
-        const computerIndex = Math.floor(Math.random() * choices.length);
-        const computerChoice = choices[computerIndex];
+            if (!playerChoice) {
+                alert('Не хочешь сейчас играть? Приходи еще как будет желание!');
+                break;
+            }
+            
+            // Сделать слово пользователя одним регистром и не учитывать пробелы
+            const normalizedPlayerChoice = playerChoice.trim().replace(/\s+/g, '').toLowerCase();
+            
+            // Сгенерировать вариант компьютера
+            const computerIndex = Math.floor(Math.random() * choices.length);
+            const computerChoice = choices[computerIndex];
 
         // Ответ в зависимости от того кто что выбрал или если написал не то слово
         let resultMessage;
@@ -75,6 +73,5 @@ document.getElementById('button-gameRockPaperScissors').addEventListener('click'
     }
 }
 
-// Пример вызова игры
 gameRockPaperScissors();
 });

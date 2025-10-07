@@ -19,6 +19,7 @@ body {
   height: 800px;
   width: auto;
   background: #E1FF8F url(images/star-decoration.png) no-repeat -10% 80%;
+  position: relative; /* ! */
 }
 .heading__title {
   color: rgb(32, 32, 39);
@@ -67,6 +68,32 @@ button:hover {
   border: 1px solid rgb(32, 32, 39);
 }
 
+.running-line-container {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  height: 90px; /* ! */
+}
+
+.running-line {
+  display: inline-block;
+  vertical-align: middle;
+  animation: marquee 17s linear infinite; /*НАСТРОИТЬ ВРЕМЯ-СКОРОСТЬ */
+  margin-right: -5px; /*чтобы не было прогала */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%); /* сначала просто по центру */
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .about {
   height: 1470px;
   background: url(images/star-decoration-about.png) no-repeat -10% top;
@@ -249,7 +276,7 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
-@media (max-width: 544px) {
+@media (max-width: 628px) {
   .center {
     padding-left: 15px;
     padding-right: 15px;
@@ -258,12 +285,16 @@ button:hover {
     height: 700px;
     background: #E1FF8F url(images/star-decoration-mobile.png) no-repeat;
     text-align: center;
+    position: relative;
+    width: auto;
+    /* Для бегущей строки */
+    /* Бегущая строка !!! СЪЕХАЛА ВНИЗ(*/
   }
   .heading__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 49px;
     width: auto;
     letter-spacing: 0px;
@@ -295,6 +326,20 @@ button:hover {
     text-align: center;
     margin-top: 36px;
   }
+  .heading .running-line-container {
+    height: 51px;
+    /* показывает как 90 */
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+      /* сначала просто по центру */
+    }
+    100% {
+      transform: translateX(-50%);
+      /* как тут сделать? */
+    }
+  }
   .about {
     display: none;
   }
@@ -316,7 +361,6 @@ button:hover {
   }
   .mini-games__cards {
     display: flex;
-    flex-direction: column;
     max-width: 100%;
     justify-content: center;
     margin-top: -24px;
@@ -361,8 +405,16 @@ button:hover {
     line-height: 141.69%;
     margin-top: 32px;
   }
+  .footer {
+    height: 100px;
+  }
+  .footer__info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }
-@media (min-width: 629px) and (max-width: 1199px) {
+@media (min-width: 736px) and (max-width: 1199px) {
   .center {
     padding-left: 20px;
     padding-right: 20px;
@@ -372,6 +424,7 @@ button:hover {
   }
   .heading__title {
     width: auto;
+    font-size: auto;
   }
   .about {
     display: none;
@@ -423,12 +476,13 @@ button:hover {
     width: 100%;
   }
 }
-@media (min-width: 377px) and (max-width: 628px) {
+@media (min-width: 629px) and (max-width: 735px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
   }
   .heading {
+    width: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -437,7 +491,7 @@ button:hover {
   .heading__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 49px;
     width: auto;
@@ -455,35 +509,40 @@ button:hover {
     width: auto;
   }
   .heading__button {
-    font-size: 24px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    width: 260px;
+    height: 55px;
+    align-items: center;
+    padding: 16px 28px 16px 28px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
     margin-top: 36px;
   }
   .about {
     display: none;
   }
-  .mini-games {
-    padding-bottom: 60px;
-  }
-  .mini-games__cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .mini-games-card_one, .mini-games-card_two, .mini-games-card_three, .mini-games-card_four, .mini-games-card_five, .mini-games-card_six {
-    width: 343px;
+  .mini-games-card {
+    max-width: 343px;
     display: flex;
     flex-direction: column-reverse;
     margin-top: 24px;
+  }
+  .mini-games-card__info {
+    width: auto;
+    padding: 29px 29px 32px 29px;
   }
   .mini-games-card__name {
     font-family: Montserrat;
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
-    text-align: center;
-    max-width: 100%;
+    text-align: left;
   }
   .mini-games-card__description {
     font-family: Montserrat;
@@ -491,17 +550,21 @@ button:hover {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0px;
-    text-align: center;
-    max-width: 100%;
-  }
-  .mini-games-card__info {
-    max-width: 100%;
-    padding: 20px;
-    align-items: center;
+    text-align: left;
+    margin-top: 16px;
   }
   .mini-games-card__image {
-    width: 100%;
-    height: 285px;
+    width: auto;
+    height: auto;
     border-radius: 27.22px;
+  }
+  .mini-games-card__button {
+    width: 285px;
+    height: 55px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    margin-top: 32px;
   }
 }/*# sourceMappingURL=style.css.map */

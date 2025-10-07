@@ -18,6 +18,7 @@ body {
     height: 800px;
     width: auto;
     background: #E1FF8F url(images/star-decoration.png) no-repeat -10% 80%;  
+    position: relative; /* ! */
     &__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
@@ -64,6 +65,34 @@ button:hover {
     color: #000; 
     border: 1px solid rgb(32, 32, 39);           
 }
+
+.running-line-container {
+    position: absolute; 
+    display: flex;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    overflow: hidden;  
+    z-index: 1; 
+    height: 90px; /* ! */
+}
+
+.running-line {
+    display: inline-block;
+    vertical-align: middle;
+    animation: marquee 17s linear infinite;  /*НАСТРОИТЬ ВРЕМЯ-СКОРОСТЬ */
+    margin-right: -5px; /*чтобы не было прогала */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%); /* сначала просто по центру */
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
 .about {
     height: 1470px;
     background: url(images/star-decoration-about.png) no-repeat -10% top;
